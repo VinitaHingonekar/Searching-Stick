@@ -48,8 +48,13 @@ namespace Gameplay {
             void resetSearchStick();
 
             void processLinearSearch();
+            void processBinarySearch();
+
             void initializeSticksArray();
             float calculateStickHeight(int array_pos);
+
+            void sortElements();
+            bool compareElementsByData(const Stick* a, const Stick* b) const;
 
             void destroy();
 
