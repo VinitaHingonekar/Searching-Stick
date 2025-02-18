@@ -138,6 +138,7 @@ namespace Gameplay {
 			switch (search_type)
 			{
 				case Gameplay::Collection::SearchType::LINEAR_SEARCH:
+					time_complexity = "O(n)";
 					current_operation_delay = collection_model->linear_search_delay;;
 					search_thread = std::thread(&StickCollectionContoller::processLinearSearch, this);
 					break;
@@ -167,6 +168,11 @@ namespace Gameplay {
 		int Gameplay::Collection::StickCollectionContoller::getDelayMilliseconds()
 		{
 			return current_operation_delay;
+		}
+
+		std::string Gameplay::Collection::StickCollectionContoller::getTimeComplexity()
+		{
+			return time_complexity;
 		}
 
 		void Gameplay::Collection::StickCollectionContoller::shuffleSticks()

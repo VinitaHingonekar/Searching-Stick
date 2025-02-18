@@ -2,6 +2,7 @@
 #include <SFML/Graphics.hpp>
 #include <vector>
 #include <thread>
+#include <string>
 
 namespace Gameplay {
 
@@ -29,6 +30,9 @@ namespace Gameplay {
             int current_operation_delay;
 
             std::thread search_thread;
+
+            int delay_in_ms;
+            sf::String time_complexity;
 
             void processSearchThreadState();
             void joinThreads();
@@ -68,6 +72,7 @@ namespace Gameplay {
             int getNumberOfSticks();
 
             int getDelayMilliseconds();
+            std::string getTimeComplexity();
         };
     }
 
