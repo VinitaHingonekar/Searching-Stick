@@ -73,4 +73,9 @@ namespace Gameplay
 		return collection_controller->getNumberOfSticks();
 	}
 
+	int GameplayService::getDelayMilliseconds()
+	{
+		return collection_controller->getDelayMilliseconds();
+	}
+
 }

@@ -26,7 +26,6 @@ namespace Gameplay
 
             int linear_search_delay = 120;
 
-
             int number_of_elements = 100;
 
             StickCollectionModel();

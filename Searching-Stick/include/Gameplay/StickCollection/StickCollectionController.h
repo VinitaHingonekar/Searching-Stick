@@ -19,29 +19,34 @@ namespace Gameplay {
             StickCollectionModel* collection_model;
 
             std::vector<Stick*> sticks;
+            Stick* stick_to_search;
 
             Collection::SearchType search_type;
 
-            Stick* stick_to_search;
-
             int number_of_comparisons;
             int number_of_array_access;
+
+            int current_operation_delay;
+
+            std::thread search_thread;
+
+            void processSearchThreadState();
+            void joinThreads();
 
             void initializeSticks();
             float calculateStickWidth();
 
             void updateSticksPosition();
+            void shuffleSticks();
 
             void resetSticksColor();
-            void initializeSticksArray();
-            float calculateStickHeight(int array_pos);
-
-            void shuffleSticks();
+            void resetVariables();
             void resetSearchStick();
 
             void processLinearSearch();
+            void initializeSticksArray();
+            float calculateStickHeight(int array_pos);
 
-            void resetVariables();
             void destroy();
 
         public:
@@ -57,10 +62,14 @@ namespace Gameplay {
             void searchElement(SearchType search_type);
 
             SearchType getSearchType();
-
-            int getNumberOfSticks();
             int getNumberOfComparisons();
             int getNumberOfArrayAccess();
+
+            int getNumberOfSticks();
+
+            int getDelayMilliseconds();
         };
     }
+
+
 }
