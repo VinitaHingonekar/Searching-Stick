@@ -18,5 +18,7 @@ namespace Global
 
 		static const sf::String button_click_sound_path;
 		static const sf::String compare_sfx_path;
+
+		static const sf::String menu_button_large_texture_path;
 	};
 }
