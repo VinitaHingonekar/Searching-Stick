@@ -78,4 +78,8 @@ namespace Gameplay
 		return collection_controller->getDelayMilliseconds();
 	}
 
+	std::string GameplayService::getTimeComplexity()
+	{
+		return collection_controller->getTimeComplexity();
+	}
 }

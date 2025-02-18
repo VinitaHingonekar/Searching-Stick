@@ -36,5 +36,7 @@ namespace Gameplay
 
 		void initializeRandomSeed();
 
+		std::string getTimeComplexity();
+
 	};
 }
